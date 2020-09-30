@@ -3,6 +3,8 @@ package main
 import array.*
 import stack.isValid
 import stack.reverseInteger
+import stringmanipulation.gauss
+import stringmanipulation.isPalindromeWithTwoPointer
 import stringmanipulation.reverseString2
 import stringmanipulation.twoSum2
 
@@ -26,4 +28,10 @@ fun main(args: Array<String>) {
     closest(intArrayOf(10,22,28,29,30,40), 54)
 
     findTriplet(intArrayOf(5,32,1,7,10,50,19,21,2))
+
+    println("palindrome: ${isPalindromeWithTwoPointer("madam")}")
+    println("palindrome: ${isPalindromeWithTwoPointer("madan")}")
+    println("palindrome: ${isPalindromeWithTwoPointer("kanak")}")
+
+    gauss(intArrayOf(1,2,3,4,5,6,7,8,9,10))
 }

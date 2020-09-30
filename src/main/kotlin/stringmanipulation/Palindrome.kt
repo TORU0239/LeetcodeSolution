@@ -30,3 +30,19 @@ fun isPalindromeWithRegex(str:String):Boolean {
     val reversed = lower.reversed()
     return (reversed == lower)
 }
+
+
+// palindrome with two pointer
+fun isPalindromeWithTwoPointer(str:String):Boolean{
+    val arr = str.toCharArray()
+    var left = 0
+    var right = arr.size - 1
+    while (left < right) {
+        if (arr[left] != arr[right]) {
+            return false
+        }
+        left++
+        right--
+    }
+    return true
+}

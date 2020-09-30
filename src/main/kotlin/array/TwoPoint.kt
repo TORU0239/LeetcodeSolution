@@ -83,10 +83,7 @@ fun isPairSum(arr:IntArray, value:Int) {
 }
 
 // Find the closest pair from two sorted arrays
-
 fun printClosest(arr1:IntArray, arr2:IntArray, value:Int) {
-
-
     var diff = Integer.MAX_VALUE
     var left = 0
     var right = arr2.size - 1
@@ -148,4 +145,20 @@ fun findTriplet(arr:IntArray) {
             }
         }
     }
+}
+
+fun gauss(arr:IntArray){
+    var sum = 0
+    var left = 0
+    var right = arr.size - 1
+
+    var calTime = 0
+    while (left < right) {
+        println("cal time: ${++calTime}")
+        sum += (arr[left] + arr[right])
+        left++
+        right--
+    }
+
+    println("sum: $sum")
 }
