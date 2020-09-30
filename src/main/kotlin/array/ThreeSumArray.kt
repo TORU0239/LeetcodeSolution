@@ -30,7 +30,7 @@ fun three(nums:IntArray) {
 }
 
 fun threeSum(nums: IntArray): List<List<Int>> {
-    var set = HashSet<List<Int>>()
+    val set = HashSet<List<Int>>()
     if(nums.size <= 2) {
         return set.toList()
     }
@@ -40,7 +40,7 @@ fun threeSum(nums: IntArray): List<List<Int>> {
         var low = i + 1
         var high = nums.size - 1
         while (low < high) {
-            var sum = nums[i] + nums[low] + nums[high]
+            val sum = nums[i] + nums[low] + nums[high]
             when {
                 sum == 0 -> {
                     set.add(listOf(nums[i], nums[low], nums[high]))
@@ -53,4 +53,36 @@ fun threeSum(nums: IntArray): List<List<Int>> {
         }
     }
     return set.toList()
+}
+
+
+fun threeSumWithValue(nums:IntArray, value:Int):List<List<Int>> {
+    val hashset = HashSet<List<Int>>()
+    nums.sort()
+    for (i in 0..nums.size - 2) {
+        if(i > 0 && nums[i] == nums[i-1]) continue
+
+        var low = i+1
+        var high = nums.size - 1
+
+        while (low < high) {
+            val sum = nums[i] + nums[low] + nums[high]
+            when {
+                sum == value -> {
+                    println("${nums[i]} / ${nums[low]} / ${nums[high]}")
+                    hashset.add(listOf(nums[i], nums[low], nums[high]))
+                    low++
+                    high--
+                }
+                sum < value -> {
+                    low++
+                }
+                else -> {
+                    high--
+                }
+            }
+        }
+    }
+
+    return hashset.toList()
 }
