@@ -1,12 +1,12 @@
 package main
 
 import array.*
+import stack.QueueUsingStack
 import stack.isValid
 import stack.reverseInteger
-import stringmanipulation.gauss
+
 import stringmanipulation.isPalindromeWithTwoPointer
 import stringmanipulation.reverseString2
-import stringmanipulation.twoSum2
 
 fun main(args: Array<String>) {
     reverseString2(charArrayOf('h','e', 'l', 'l', 'o'))
@@ -34,4 +34,15 @@ fun main(args: Array<String>) {
     println("palindrome: ${isPalindromeWithTwoPointer("kanak")}")
 
     gauss(intArrayOf(1,2,3,4,5,6,7,8,9,10))
+
+
+    val queue = QueueUsingStack()
+    queue.push(1)
+    queue.push(2)
+    queue.push(3)
+
+    println(queue.pop())
+    println(queue.pop())
+    println(queue.pop())
+    println(queue.pop())
 }
