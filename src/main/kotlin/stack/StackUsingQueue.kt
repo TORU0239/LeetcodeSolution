@@ -25,3 +25,28 @@ class QueueUsingStack {
         return data
     }
 }
+
+class StackUsingQueue {
+    private val q1 = LinkedList<Int>()
+    private val q2 = LinkedList<Int>()
+
+    fun push(element:Int) {
+        if(q1.isEmpty()) {
+            q1.push(element)
+        } else {
+            for (i in 0 until q1.size) {
+                q2.add(q1.remove())
+            }
+            q1.add(element)
+
+            for (i in 0 until q2.size) {
+                q1.add(q2.remove())
+            }
+        }
+
+    }
+
+    fun pop():Int {
+        return q1.remove()
+    }
+}

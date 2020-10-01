@@ -2,6 +2,7 @@ package main
 
 import array.*
 import stack.QueueUsingStack
+import stack.StackUsingQueue
 import stack.isValid
 import stack.reverseInteger
 
@@ -36,13 +37,21 @@ fun main(args: Array<String>) {
     gauss(intArrayOf(1,2,3,4,5,6,7,8,9,10))
 
 
-    val queue = QueueUsingStack()
-    queue.push(1)
-    queue.push(2)
-    queue.push(3)
+//    val queue = QueueUsingStack()
+//    queue.push(1)
+//    queue.push(2)
+//    queue.push(3)
+//
+//    println(queue.pop())
+//    println(queue.pop())
+//    println(queue.pop())
 
-    println(queue.pop())
-    println(queue.pop())
-    println(queue.pop())
-    println(queue.pop())
+    val stack = StackUsingQueue()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+
+    println(stack.pop())
+    println(stack.pop())
+    println(stack.pop())
 }
