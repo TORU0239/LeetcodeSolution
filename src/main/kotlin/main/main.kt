@@ -1,12 +1,12 @@
 package main
 
+import Fibonacci
 import array.*
-import stack.QueueUsingStack
-import stack.StackUsingQueue
-import stack.isValid
-import stack.reverseInteger
+import fibonacciRecur
+import stack.*
 
 import stringmanipulation.isPalindromeWithTwoPointer
+import stringmanipulation.longestCommonPrefix
 import stringmanipulation.reverseString2
 
 fun main(args: Array<String>) {
@@ -46,12 +46,53 @@ fun main(args: Array<String>) {
 //    println(queue.pop())
 //    println(queue.pop())
 
-    val stack = StackUsingQueue()
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
+//    val stack = StackUsingQueue()
+//    stack.push(1)
+//    stack.push(2)
+//    stack.push(3)
+//
+//    println(stack.pop())
+//    println(stack.pop())
+//    println(stack.pop())
 
-    println(stack.pop())
-    println(stack.pop())
-    println(stack.pop())
+//    val queue = TwoStackForQueue()
+//    queue.push(1)
+//    queue.push(2)
+//    queue.push(3)
+//    queue.push(4)
+//    queue.push(5)
+//
+//    println(queue.pop())
+//    println(queue.pop())
+//    println(queue.pop())
+//    println(queue.pop())
+//    println(queue.pop())
+//
+//    val stack = TwoQueueForStack()
+//    stack.push(1)
+//    stack.push(2)
+//    stack.push(3)
+//    stack.push(4)
+//    stack.push(5)
+//
+//    println(stack.pop())
+//    println(stack.pop())
+//    println(stack.pop())
+//    println(stack.pop())
+//    println(stack.pop())
+
+//    longestCommonPrefix(arrayOf("google", "googol", "goose", "geese", "gogogo"))
+
+    val fibo = Fibonacci()
+    println(fibo.fibonacciMemoization(3))
+    println(fibo.fibonacciMemoization(5))
+    println(fibo.fibonacciMemoization(7))
+    println(fibo.fibonacciMemoization(10))
+    println(fibo.fibonacciMemoization(11))
+    println(fibo.fibonacciMemoization(12))
+    println(fibo.fibonacciMemoization(20))
+
+
+
+
 }

@@ -13,6 +13,24 @@ package stringmanipulation
 //    }
 //    throw new IllegalArgumentException("No two sum solution");
 
+
+// 2, 7, 11, 15, target = 9 / [0,1]
+fun twosum(nums:IntArray, target:Int){
+    val map = HashMap<Int,Int>()
+
+    for (i in nums.indices) {
+        map[nums[i]] = i
+    }
+
+    for (i in nums.indices) {
+        val c = target - nums[i]
+        // if c is included in the map, and index is not same.
+        if (map.containsKey(c) && map[c] != i) {
+            intArrayOf(i, map[c]!!)
+        }
+    }
+}
+
 fun twoSum(nums:IntArray, target:Int):IntArray {
     val map = HashMap<Int, Int>()
     for (i in nums.indices) {
